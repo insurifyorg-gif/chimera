@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complimentary Diagnostic | Apex Strategic Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">Apex <span>Strategic</span></div>
+    <div class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="portal.html">Secure Portal</a>
+      <a href="diagnostic.html" class="active">Diagnostic</a>
+    </div>
+  </nav>
+
+  <div class="form-container animate-on-scroll">
+    <h2 class="section-title" style="margin-bottom: 1rem; font-size: 2rem;">Complimentary Diagnostic</h2>
+    <p style="color: var(--fg-secondary); margin-bottom: 2.5rem; font-size: 0.9rem;">
+      Please grant us view-only access parameters to begin analyzing your Model Inefficiency Factors and calculate your Potential Reallocation Value.
+    </p>
+
+    <form id="diagnostic-form">
+      <div class="form-group">
+        <label for="fullName">Principal Name</label>
+        <input type="text" id="fullName" name="fullName" required placeholder="John Doe" />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Contact Email</label>
+        <input type="email" id="email" name="email" required placeholder="j.doe@familyoffice.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="portfolioSize">Estimated Portfolio Legacy Exposure</label>
+        <select id="portfolioSize" name="portfolioSize" required>
+          <option value="" disabled selected>Select Exposure Level</option>
+          <option value="$10m-$50m">$10M - $50M</option>
+          <option value="$50m-$100m">$50M - $100M</option>
+          <option value="$100m+">$100M+</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="legacyInsurer">Targeted Legacy Insurer</label>
+        <input type="text" id="legacyInsurer" name="legacyInsurer" placeholder="e.g. Chubb, AIG (Optional)" />
+      </div>
+
+      <div id="status-message" style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--accent-gold); display: none;"></div>
+      
+      <button type="submit" class="btn" id="submit-btn">Activate Diagnostic Analysis</button>
+      <p style="color: var(--fg-secondary); font-size: 0.75rem; text-align: center; margin-top: 1rem;">
+        * Note: Form submission is currently disabled pending configuration of the Firebase environment. Review the README/deployment guide for details.
+      </p>
+    </form>
+  </div>
+
+  <footer>
+    <div>&copy; 2026 Apex Strategic Group. All rights reserved.</div>
+    <div>Secure Submission</div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+  <script type="module">
+    import './style.css';
+    import { db, collection, addDoc } from './firebase-config.js';
+
+    document.getElementById('diagnostic-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submit-btn');
+      const statusMsg = document.getElementById('status-message');
+      
+      btn.textContent = "Processing...";
+      btn.disabled = true;
+
+      try {
+        const docRef = await addDoc(collection(db, "diagnosticRequests"), {
+          fullName: document.getElementById('fullName').value,
+          email: document.getElementById('email').value,
+          portfolioSize: document.getElementById('portfolioSize').value,
+          legacyInsurer: document.getElementById('legacyInsurer').value,
+          submittedAt: new Date().toISOString()
+        });
+        
+        statusMsg.style.display = 'block';
+        statusMsg.textContent = "Diagnostic Request Initiated. Our partners will contact you shortly.";
+        statusMsg.style.color = "var(--accent-gold)";
+        document.getElementById('diagnostic-form').reset();
+      } catch (error) {
+        console.error("Error adding document: ", error);
+        statusMsg.style.display = 'block';
+        statusMsg.textContent = "Error submitting request. Please verify Firebase configuration.";
+        statusMsg.style.color = "red";
+      } finally {
+        btn.textContent = "Activate Diagnostic Analysis";
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
