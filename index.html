@@ -8,55 +8,99 @@
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
     <nav>
       <div class="logo">Apex <span>Strategic</span></div>
       <div class="nav-links">
         <a href="index.html" class="active">Overview</a>
+        <a href="#">Methodology</a>
         <a href="portal.html">Secure Portal</a>
         <a href="diagnostic.html">Diagnostic</a>
+        <a href="#">Insights</a>
       </div>
     </nav>
 
     <header class="hero">
-      <img src="/hero.png" alt="Apex Strategic Background" class="hero-bg" />
+      <img src="/hero.png" alt="Apex Strategic Background" class="hero-bg" onerror="this.style.display='none'" />
       <div class="hero-gradient"></div>
       
-      <h1>Illuminating Hidden Risks</h1>
-      <p>We are extending a limited invitation to a select group of individuals to participate in the full-spectrum Chimera Protocol. Uncover the systemic exposures in your legacy insurance contracts.</p>
-      
-      <a href="portal.html" class="btn">View Market Dynamics</a>
+      <div class="hero-content">
+        <div class="hero-badge">Project Chimera Framework</div>
+        <h1><span class="gradient-text">Illuminating</span> Hidden Risks</h1>
+        <p>We are extending a limited invitation to a select group of individuals to participate in the full-spectrum Chimera Protocol. Uncover the systemic exposures and structural deficits embedded deeply within your legacy insurance contracts.</p>
+        
+        <div class="btn-group">
+          <a href="portal.html" class="btn primary">
+            <span class="btn-hover-effect"></span>
+            View Market Dynamics
+          </a>
+          <a href="diagnostic.html" class="btn">
+            <span class="btn-hover-effect"></span>
+            Initiate Diagnostic
+          </a>
+        </div>
+      </div>
     </header>
 
     <section id="opportunity">
-      <h2 class="section-title animate-on-scroll">The Exclusive Opportunity</h2>
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Strategic Advantage</span>
+        <h2 class="section-title">The Exclusive <span class="gradient-text">Opportunity</span></h2>
+        <p class="section-desc">Conventional audits measure against past parameters. The Chimera Protocol acts as a forward-looking intelligence engine, identifying and rectifying value leakage across complex generational portfolios.</p>
+      </div>
+
       <div class="grid">
         <div class="card animate-on-scroll">
+          <div class="card-number">01</div>
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+          </div>
           <h3>Market Mapping</h3>
-          <p>We focus exclusively on ultra-high-net-worth portfolios. Our specialized data analytics platforms target vintage policies, analyzing models established 3+ years ago for outdated actuaries.</p>
+          <p>We focus exclusively on ultra-high-net-worth portfolios. Our specialized analytics platforms target vintage policies, analyzing models established 3+ years ago for outdated actuaries and regulatory drift.</p>
         </div>
-        <div class="card animate-on-scroll">
+        
+        <div class="card animate-on-scroll" style="transition-delay: 0.1s;">
+          <div class="card-number">02</div>
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
           <h3>Proprietary Intelligence</h3>
-          <p>Access our analytical engine that stress-tests complex valuation assets against current market shifts. This goes beyond simple transactions—it is foresight typically reserved for institutions.</p>
+          <p>Access our analytical engine that stress-tests complex valuation assets against current market shifts. This goes far beyond simple transaction review—it is predictive foresight typically reserved strictly for institutional operators.</p>
         </div>
-        <div class="card animate-on-scroll">
+        
+        <div class="card animate-on-scroll" style="transition-delay: 0.2s;">
+          <div class="card-number">03</div>
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
           <h3>Strategic Execution</h3>
-          <p>We actively manage the strategic reallocation of your identified inefficiencies, providing ongoing high-end advisement and bespoke oversight over the next 12 months.</p>
+          <p>We actively manage the strategic reallocation of your identified inefficiencies, providing ongoing high-end advisement, discrete negotiations, and bespoke oversight over the subsequent 12-to-24 month fiscal cycle.</p>
         </div>
       </div>
     </section>
 
-    <section id="cta" style="text-align: center; border-top: 1px solid var(--border-subtle)">
-      <h2 class="section-title animate-on-scroll">Identify Your Model Inefficiency Factors</h2>
-      <p class="animate-on-scroll" style="margin-bottom: 2rem; color: var(--fg-secondary);">Request a complimentary diagnostic. Engage our sophisticated framework to discover the true Reallocation Value within your portfolio.</p>
-      <a href="diagnostic.html" class="btn animate-on-scroll">Request Diagnostic</a>
+    <section id="cta" style="border-top: 1px solid var(--border-subtle); background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);">
+      <div class="text-center mx-auto" style="max-width: 800px;">
+        <span class="section-label animate-on-scroll">Next Steps</span>
+        <h2 class="section-title animate-on-scroll">Identify Your Model <br/><span class="gradient-text">Inefficiency Factors</span></h2>
+        <p class="animate-on-scroll section-desc mb-8">Request a complimentary diagnostic. Engage our sophisticated framework to discover the true Reallocation Value mathematically hidden within your portfolio's current structure.</p>
+        <a href="diagnostic.html" class="btn primary animate-on-scroll">
+          <span class="btn-hover-effect"></span>
+          Request Diagnostic Protocol
+        </a>
+      </div>
     </section>
 
     <footer>
       <div>&copy; 2026 Apex Strategic Group. All rights reserved.</div>
-      <div>Confidential & Proprietary</div>
+      <div>Confidential & Proprietary restricted to Authorized Principals.</div>
     </footer>
 
     <script type="module" src="/main.js"></script>

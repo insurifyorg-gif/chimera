@@ -6,38 +6,73 @@
   <title>Secure Portal | Apex Strategic Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1" style="left: auto; right: -10%; top: 20%; background: radial-gradient(circle, rgba(40,50,70,0.8), transparent 70%);"></div>
+  <div class="bg-orb orb-2" style="right: auto; left: -10%; bottom: 10%; background: radial-gradient(circle, var(--accent-gold-dark), transparent 70%);"></div>
+
   <nav>
     <div class="logo">Apex <span>Strategic</span></div>
     <div class="nav-links">
       <a href="index.html">Overview</a>
+      <a href="#">Methodology</a>
       <a href="portal.html" class="active">Secure Portal</a>
       <a href="diagnostic.html">Diagnostic</a>
+      <a href="#">Insights</a>
     </div>
   </nav>
 
   <div class="portal-container">
-    <h2 class="section-title animate-on-scroll">Market Dynamics Briefing</h2>
-    <p class="animate-on-scroll" style="color: var(--fg-secondary); max-width: 800px; text-align: center; margin-bottom: 3rem;">
-      Analyzing systemic regulatory arbitrage opportunities and actuarial model lag within complex valuation asset classes.
-    </p>
-
-    <img src="/portal.png" alt="Proprietary Analytical Interface" class="portal-img animate-on-scroll" />
-
-    <section style="padding: 2rem 5%; max-width: 900px;">
-      <h3 style="color: var(--fg-primary); margin-bottom: 1rem; font-family: 'Outfit';">The Chimera Engine Analysis</h3>
-      <p style="color: var(--fg-secondary); margin-bottom: 1.5rem;">
-        Legacy brokers focus on static transactions. Our proprietary engine models the deviation between 3-year trailing actuarial baselines and real-time market risk derivatives. We don't fix errors; we illuminate sophisticated reallocations to capture latent value.
+    <div class="section-header text-center mx-auto" style="margin-bottom: 2rem;">
+      <span class="section-label animate-on-scroll">Terminal Environment</span>
+      <h2 class="section-title animate-on-scroll">Market <span class="gradient-text">Dynamics Briefing</span></h2>
+      <p class="animate-on-scroll section-desc">
+        Analyzing systemic regulatory arbitrage opportunities and real-time actuarial model lag within complex valuation asset classes.
       </p>
-      <a href="diagnostic.html" class="btn">Proceed to Diagnostic</a>
+    </div>
+
+    <div class="portal-img-wrapper animate-on-scroll">
+      <img src="/portal.png" alt="Proprietary Analytical Interface" class="portal-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAwIiBoZWlnaHQ9IjYwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzBBMEQxNCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iT3V0Zml0IiBmb250LXNpemU9IjI0IiBmaWxsPSIjOTBBMzBFIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TZWN1cmUgVGVsZW1ldHJ5IEludGVyZmFjZSBPZmZsaW5lIHwgcG9ydGFsLnBuZyBNaXNzaW5nPC90ZXh0Pjwvc3ZnPg=='" />
+    </div>
+
+    <section style="padding: 2rem 5%; max-width: 1000px; padding-top: 0;">
+      <div class="features-list">
+        <div class="feature-item animate-on-scroll">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+          </div>
+          <div>
+            <h4 style="color: var(--fg-primary); margin-bottom: 0.5rem; font-size: 1.1rem;">Actuarial Deformation Modeling</h4>
+            <p style="color: var(--fg-secondary); font-size: 0.9rem;">Legacy brokers focus on static transactions. Our proprietary engine mathematically models the exact deviation between 3-year trailing actuarial baselines and real-time market risk derivatives.</p>
+          </div>
+        </div>
+        
+        <div class="feature-item animate-on-scroll" style="transition-delay: 0.1s;">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <div>
+            <h4 style="color: var(--fg-primary); margin-bottom: 0.5rem; font-size: 1.1rem;">Latent Value Extraction</h4>
+            <p style="color: var(--fg-secondary); font-size: 0.9rem;">We don't merely attempt to fix arbitrary errors; we definitively illuminate sophisticated reallocations to capture latent value masked by complex corporate strata.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center animate-on-scroll mt-8">
+        <a href="diagnostic.html" class="btn primary">
+          <span class="btn-hover-effect"></span>
+          Proceed to Diagnostic Phase
+        </a>
+      </div>
     </section>
   </div>
 
   <footer>
     <div>&copy; 2026 Apex Strategic Group. All rights reserved.</div>
-    <div>Strictly Confidential</div>
+    <div>Strictly Confidential. Do not distribute.</div>
   </footer>
 
   <script type="module" src="/main.js"></script>

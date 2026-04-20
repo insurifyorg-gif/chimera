@@ -6,62 +6,77 @@
   <title>Complimentary Diagnostic | Apex Strategic Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent 70%); left: 20%; top: -20%;"></div>
+
   <nav>
     <div class="logo">Apex <span>Strategic</span></div>
     <div class="nav-links">
       <a href="index.html">Overview</a>
+      <a href="#">Methodology</a>
       <a href="portal.html">Secure Portal</a>
       <a href="diagnostic.html" class="active">Diagnostic</a>
+      <a href="#">Insights</a>
     </div>
   </nav>
 
-  <div class="form-container animate-on-scroll">
-    <h2 class="section-title" style="margin-bottom: 1rem; font-size: 2rem;">Complimentary Diagnostic</h2>
-    <p style="color: var(--fg-secondary); margin-bottom: 2.5rem; font-size: 0.9rem;">
-      Please grant us view-only access parameters to begin analyzing your Model Inefficiency Factors and calculate your Potential Reallocation Value.
-    </p>
-
-    <form id="diagnostic-form">
-      <div class="form-group">
-        <label for="fullName">Principal Name</label>
-        <input type="text" id="fullName" name="fullName" required placeholder="John Doe" />
-      </div>
-      
-      <div class="form-group">
-        <label for="email">Contact Email</label>
-        <input type="email" id="email" name="email" required placeholder="j.doe@familyoffice.com" />
+  <div class="portal-container" style="padding-top: 120px; padding-bottom: 50px;">
+    <div class="form-container animate-on-scroll">
+      <div class="text-center mb-8">
+        <span class="section-label">Intake Protocol</span>
+        <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 1rem;">Complimentary <span class="gradient-text">Diagnostic</span></h2>
+        <p style="color: var(--fg-secondary); font-size: 0.95rem; line-height: 1.6;">
+          Please grant our firm view-only access parameters. We will initiate our proprietary processing engine to calculate your precise Model Inefficiency Factors and forecast your aggregate Potential Reallocation Value.
+        </p>
       </div>
 
-      <div class="form-group">
-        <label for="portfolioSize">Estimated Portfolio Legacy Exposure</label>
-        <select id="portfolioSize" name="portfolioSize" required>
-          <option value="" disabled selected>Select Exposure Level</option>
-          <option value="$10m-$50m">$10M - $50M</option>
-          <option value="$50m-$100m">$50M - $100M</option>
-          <option value="$100m+">$100M+</option>
-        </select>
-      </div>
+      <form id="diagnostic-form">
+        <div class="form-group">
+          <label for="fullName">Principal / Entity Name</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="e.g. John Doe / Aegis Holdings" />
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Authorized Contact Email</label>
+          <input type="email" id="email" name="email" required placeholder="director@familyoffice.com" />
+        </div>
 
-      <div class="form-group">
-        <label for="legacyInsurer">Targeted Legacy Insurer</label>
-        <input type="text" id="legacyInsurer" name="legacyInsurer" placeholder="e.g. Chubb, AIG (Optional)" />
-      </div>
+        <div class="form-group">
+          <label for="portfolioSize">Estimated Portfolio Legacy Exposure</label>
+          <select id="portfolioSize" name="portfolioSize" required>
+            <option value="" disabled selected>Select Targeted Exposure Level</option>
+            <option value="$10m-$50m">$10M - $50M Tier</option>
+            <option value="$50m-$100m">$50M - $100M Tier</option>
+            <option value="$100m+">$100M+ Prime Tier</option>
+          </select>
+        </div>
 
-      <div id="status-message" style="margin-bottom: 1rem; font-size: 0.85rem; color: var(--accent-gold); display: none;"></div>
-      
-      <button type="submit" class="btn" id="submit-btn">Activate Diagnostic Analysis</button>
-      <p style="color: var(--fg-secondary); font-size: 0.75rem; text-align: center; margin-top: 1rem;">
-        * Note: Form submission is currently disabled pending configuration of the Firebase environment. Review the README/deployment guide for details.
-      </p>
-    </form>
+        <div class="form-group">
+          <label for="legacyInsurer">Targeted Legacy Insurances (Optional)</label>
+          <input type="text" id="legacyInsurer" name="legacyInsurer" placeholder="e.g. Chubb, AIG, MassMutual" />
+        </div>
+
+        <div id="status-message" style="margin-bottom: 1.5rem; font-size: 0.85rem; padding: 1rem; border-radius: 6px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); display: none;"></div>
+        
+        <button type="submit" class="btn primary" id="submit-btn" style="width: 100%;">
+          <span class="btn-hover-effect"></span>
+          Initialize Extraction Algorithm
+        </button>
+        
+        <p style="color: var(--fg-muted); font-size: 0.75rem; text-align: center; margin-top: 1.5rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          256-bit encrypted transmission. Pending Firebase environment configuration in README.
+        </p>
+      </form>
+    </div>
   </div>
 
-  <footer>
-    <div>&copy; 2026 Apex Strategic Group. All rights reserved.</div>
-    <div>Secure Submission</div>
+  <footer style="margin-top: 0; background: transparent; border-top: 0;">
+    <div style="flex: 1; text-align: center;">&copy; 2026 Apex Strategic Group. All rights reserved. <br/> <span style="font-size: 0.75rem; color: var(--fg-muted);">Secure Submission Node</span></div>
   </footer>
 
   <script type="module" src="/main.js"></script>
@@ -74,8 +89,9 @@
       
       const btn = document.getElementById('submit-btn');
       const statusMsg = document.getElementById('status-message');
+      const originalText = btn.innerHTML;
       
-      btn.textContent = "Processing...";
+      btn.innerHTML = "Processing Parameters...";
       btn.disabled = true;
 
       try {
@@ -88,16 +104,16 @@
         });
         
         statusMsg.style.display = 'block';
-        statusMsg.textContent = "Diagnostic Request Initiated. Our partners will contact you shortly.";
-        statusMsg.style.color = "var(--accent-gold)";
+        statusMsg.innerHTML = "<strong style='color: var(--accent-gold);'>Protocol Initiated.</strong><br/>Our senior partners will contact your authorized representative shortly.";
+        statusMsg.style.borderColor = "var(--accent-gold-glow)";
         document.getElementById('diagnostic-form').reset();
       } catch (error) {
         console.error("Error adding document: ", error);
         statusMsg.style.display = 'block';
-        statusMsg.textContent = "Error submitting request. Please verify Firebase configuration.";
-        statusMsg.style.color = "red";
+        statusMsg.innerHTML = "<strong style='color: #ff5555;'>Transmission Error.</strong><br/>Please verify upstream Firebase connection parameters.";
+        statusMsg.style.borderColor = "rgba(255, 85, 85, 0.3)";
       } finally {
-        btn.textContent = "Activate Diagnostic Analysis";
+        btn.innerHTML = originalText;
         btn.disabled = false;
       }
     });
